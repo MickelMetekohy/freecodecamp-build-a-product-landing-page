@@ -1,0 +1,68 @@
+#site-footer {
+    max-width: 1400px;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    h6 {
+        color: #111;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        -webkit-appearance: none !important;
+    }
+    .footerAddress,
+    .footerContactInfo,
+    .footerHours,
+    .footerDonation {
+        border-top: 1px solid #ccc;
+        cursor: pointer;
+    }
+    a {
+        color: #111;
+        text-decoration: underline;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    p {
+        color: #111;
+        font-size: 14px;
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer-logo {
+        height: 75px;
+        width: 100%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            max-width: 100%;
+            margin-left: -5px;
+        }
+    }
+    .container {
+        max-width: 100%;
+    }
+    .social-media {
+        margin: 0;
+        padding: 0;
+        a {
+          border: 1px solid #111;
+          text-decoration: none;
+          text-align: center;
+          &::before {
+            color: #111;
+          }
+          &:hover {
+              background-color: $fcc-green;
+              border: 1px solid $fcc-green;
+              &::before {
+                color: #fff;
+            }
+          }
+        }
+    }
+}

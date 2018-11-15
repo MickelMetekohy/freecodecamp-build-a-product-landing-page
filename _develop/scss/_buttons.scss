@@ -1,0 +1,30 @@
+.button,
+.button-white,
+a.button,
+a.button-white {
+  display: inline-block;
+  border: 1px solid white;
+  color: white;
+  padding: 15px 45px;
+  margin: 0 30px;
+  background: none;
+  font-size: 18px;
+  line-height: 31px;
+  transition: all .25s ease;
+
+  &:hover {
+    color: #111;
+    background-color: #fff;
+  }
+}
+
+.button-fcc-green,
+a.button-fcc-green {
+  border: 1px solid $fcc-green;
+  color: $fcc-green;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $fcc-green;
+  }
+}

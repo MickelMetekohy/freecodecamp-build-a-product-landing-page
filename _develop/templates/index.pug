@@ -1,0 +1,114 @@
+//- page: index.pug
+//- extends: layouts/default.pug
+
+//- page variables
+//- block pageVariables
+  - title = "Coolidge Corner";
+  - metaAuthor = "Mickel Metekohy, mkr.metekohy@gmail.com";
+  - metaDescription = "";
+  - bodyClass = "";
+  - page = "index";
+  - pageType = 'sub-page';
+  - pageClass = 'theater-page';
+
+//- block prepend head
+//- block head
+//- block append head
+
+//- block prepend header
+//- block header
+//- block append header
+
+//- block content
+
+//- block prepend footer
+//- block footer
+//- block append footer
+
+//- block prepend scripts
+//- block scripts
+//- block append scripts
+
+extends layouts/default.pug
+
+//- page variables
+block pageVariables
+  - title = 'Build a Product Landing Page';
+  - metaDescription = "This is a www.freecodecamp.org assignment."
+  - page = 'index';
+  - pageType = 'home-page';
+  - pageClass = 'home-page';
+
+block content
+
+  +hero("hero-home-page text-center text-white")
+    h1.display-3 Learn to code for free
+    p.lead Join a supportive community of millions of coders.
+    p: a.button(href="#start" role="button") Let's get started!
+  
+  main#site-content
+
+    +section("what", "what")
+      h3.display-4 What Will I Learn
+      p.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in venenatis velit. Sed sed est nunc. Pellentesque scelerisque placerat nisi, ac ultrices justo malesuada et. Aliquam malesuada, leo non aliquet ultrices, tortor ex varius lorem, sit amet suscipit nisl tellus sed magna.
+      div.container.text-center
+        div.row.wwd-carousel
+          -
+            var wwdItems = [
+              {title: 'HTML5' , icon: 'fab fa-html5', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
+              {title: 'CSS3' , icon: 'fab fa-css3', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
+              {title: 'Sass' , icon: 'fab fa-sass', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
+              {title: 'JavaScript' , icon: 'fab fa-js', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
+              {title: 'Databases' , icon: 'fas fa-database', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
+              {title: 'Git & GitHub' , icon: 'fab fa-git', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
+              {title: 'Node.js' , icon: 'fab fa-node', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
+              {title: 'React.js' , icon: 'fab fa-react', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
+              {title: 'NPM' , icon: 'fab fa-npm', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
+              ];
+          each wwdItem in wwdItems
+            div.col.img-cards
+              div.icon: i(class=wwdItem.icon aria-hidden="true")
+              h6= wwdItem.title
+              p.text-hidden= wwdItem.content
+      p: a.button.button-fcc-green(href="#start" role="button") Completely Free
+
+    +section("yt-video-section", "intro")
+      div.yt-video-wrapper
+        div#video.yt-video(data-vidlist="v8kFT4I31es,eBHDKfPaJ5A,lo4BSraYvc8,FBUJYEQ7OGY")
+
+    +section("who", "who")
+      h3.display-4 Who Is It For
+      p.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in venenatis velit. Sed sed est nunc. Pellentesque scelerisque placerat nisi, ac ultrices justo malesuada et. Aliquam malesuada, leo non aliquet ultrices, tortor ex varius lorem, sit amet suscipit nisl tellus sed magna. Sed ornare iaculis urna, id scelerisque odio. Nulla facilisi. Donec eget convallis tellus, bibendum dictum leo. Fusce placerat posuere augue non posuere. Maecenas maximus accumsan imperdiet. Quisque condimentum vulputate neque quis convallis. Morbi eu hendrerit eros, at semper erat. Nulla ultricies lobortis tempor.
+      a.button.button(href="https://donate.freecodecamp.org/" role="button") Don't Like Freebies?
+      a.button(href="https://donate.freecodecamp.org/" role="button") Donate
+
+    +section("why", "why")
+      h3.display-4 Why Should I Do It
+      p.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in venenatis velit. Sed sed est nunc. Pellentesque scelerisque placerat nisi, ac ultrices justo malesuada et. Aliquam malesuada, leo non aliquet ultrices, tortor ex varius lorem, sit amet suscipit nisl tellus sed magna.
+      div.logo-carousel
+        div: div.slider-item
+          span Great Community
+          span Get Free Certification
+        div: div.slider-item
+          span Give Back to Non-Profits
+          span Get Relevant Experience
+        div: div.slider-item
+          span Become Future Proof
+          span Get Free Certification
+      br
+      a.button.button-fcc-green(href="#start" role="button") I Want It!
+
+    +section("start", "start")
+      div.row
+        div.col-sm-12.col-md-5
+          h4.display-4 Start Your Journey
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus antium.
+        div.col-sm-12.col-md-7
+          form#form.FormPanel(action="https://www.freecodecamp.com/email-submit" method="POST")
+            div.row
+              div.input-container.col-md-12
+                input#name.form-control.WatermarkText(name="name" type="text" maxlength="200" placeholder="Name")
+              div.email-container.col-md-12
+                input#email.form-control.WatermarkText(name="email" type="email" maxlength="200" placeholder="Email*" required)
+              div.col-xs-12.col-md-12
+                input#submit.FormButton.button(type="submit" name="submit" value="Get Started")

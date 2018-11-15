@@ -1,0 +1,26 @@
+header#header.w-100(class=(pageType == 'home-page') ? 'position-absolute bg-transparent' : '')
+
+  nav.navbar.navbar-expand-lg.navbar-dark: div.container
+
+    a.navbar-brand(href="#site-wrapper"): img#header-img.logo(src="../images/freecodecamp_logo-w.svg")
+    
+    button.navbar-toggler.collapsed.border-0.text-white(type="button" data-toggle="collapse" data-target="#nav-bar" aria-controls="nav-bar" aria-expanded="false" aria-label="Toggle navigation")
+      span
+      i.close-menu(aria-hidden="true"): include ../../images/Close.svg
+      i.fa.fa-bars(aria-hidden="true")
+    nav#nav-bar.collapse.navbar-collapse.justify-content-end
+        ul.navbar-nav       
+          - 
+            var menuItems = [
+              {href: '#header', text: 'Home', extraClasses: ' d-lg-none'},
+              {href: '#what', text: 'What Will I Learn', extraClasses: ''},
+              {href: '#who', text: 'Who Is It For', extraClasses: ''},
+              {href: '#why', text: 'Why Should I Do It', extraClasses: ''},
+              {href: '#start', text: 'Get Started', extraClasses: ''},
+              ];
+          each menuItem in menuItems
+            - var active = (page == menuItem.href) ? ' active' : '';
+            li(class="nav-item" + active + menuItem.extraClasses)
+              a.nav-link.text-white(href= menuItem.href)= menuItem.text
+                if active
+                  span.sr-only Current page: #{menuItem.text}

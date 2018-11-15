@@ -1,0 +1,37 @@
+//- template: default.pug
+include ../partials/mix-hero.pug
+include ../partials/mix-section.pug
+
+//- site variables
+- site_url = 'http://Freecodecamp.local';
+- metaAuthor = "Mickel Metekohy, mkr.metekohy@gmail.com";
+
+//- defaults
+block pageVariables
+  - title = "Build a Product Landing Page";
+  - metaDescription = "";
+  - bodyClass = "";
+  - page = "index";
+  - pageType = 'sub-page';
+  - pageClass = 'page-class';
+
+doctype html
+html(lang="en")
+
+  block head
+    include ../partials/head.pug 
+
+  body(class= bodyClass)
+    div#site-wrapper(class= pageClass + ' ' + pageType)
+
+      block header
+        include ../partials/header.pug 
+
+      block content
+
+      block footer
+        include ../partials/footer.pug
+
+    block scripts
+      script(src='js/app.bundle.js')
+      script(src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js')

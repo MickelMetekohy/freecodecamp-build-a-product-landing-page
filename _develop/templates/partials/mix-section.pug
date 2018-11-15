@@ -1,0 +1,10 @@
+//- mix-section.pug
+//- SECTION
+//- param 1: string of space seperated class names
+//- content: block
+//- +section("who-we-are jumbotron")
+//-   block
+mixin section(classes, id)
+  section(id=id class="mix-section jumbotron " + classes)
+    div.container
+      block

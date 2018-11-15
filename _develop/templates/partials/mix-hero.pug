@@ -1,0 +1,10 @@
+//- mix-hero.pug
+//- HERO
+//- param 1: string of space seperated class names
+//- content: block
+//- +hero("text-center text-white")
+//-   block
+mixin hero(classes)
+  section(class="mix-hero jumbotron " + classes)
+    div.container
+      block
